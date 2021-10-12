@@ -11,8 +11,13 @@
 		991607152715721D00CCC165 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991607142715721D00CCC165 /* SceneDelegate.swift */; };
 		991607172715721D00CCC165 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991607162715721D00CCC165 /* ViewController.swift */; };
 		9916071A2715721D00CCC165 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 991607182715721D00CCC165 /* Main.storyboard */; };
-		9916071C2715722000CCC165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9916071B2715722000CCC165 /* Assets.xcassets */; };
 		9916071F2715722000CCC165 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9916071D2715722000CCC165 /* LaunchScreen.storyboard */; };
+		9916072927157BDC00CCC165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9916072827157BDC00CCC165 /* Assets.xcassets */; };
+		9916072C271590D300CCC165 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916072B271590D300CCC165 /* ProductViewController.swift */; };
+		9916072F2715975800CCC165 /* BlurEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916072E2715975800CCC165 /* BlurEffectView.swift */; };
+		9916073527159A8C00CCC165 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9916073427159A8C00CCC165 /* Montserrat-Regular.ttf */; };
+		9916073827159A9300CCC165 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9916073727159A9300CCC165 /* Montserrat-Medium.ttf */; };
+		9916073B2715A37E00CCC165 /* SizeStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916073A2715A37E00CCC165 /* SizeStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +26,14 @@
 		991607142715721D00CCC165 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		991607162715721D00CCC165 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		991607192715721D00CCC165 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9916071B2715722000CCC165 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9916071E2715722000CCC165 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		991607202715722000CCC165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9916072827157BDC00CCC165 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9916072B271590D300CCC165 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		9916072E2715975800CCC165 /* BlurEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurEffectView.swift; sourceTree = "<group>"; };
+		9916073427159A8C00CCC165 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		9916073727159A9300CCC165 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		9916073A2715A37E00CCC165 /* SizeStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +70,32 @@
 				991607142715721D00CCC165 /* SceneDelegate.swift */,
 				991607162715721D00CCC165 /* ViewController.swift */,
 				991607182715721D00CCC165 /* Main.storyboard */,
-				9916071B2715722000CCC165 /* Assets.xcassets */,
 				9916071D2715722000CCC165 /* LaunchScreen.storyboard */,
+				9916073E2715A9F000CCC165 /* Views */,
+				9916073327159A6000CCC165 /* Fonts */,
+				9916072827157BDC00CCC165 /* Assets.xcassets */,
 				991607202715722000CCC165 /* Info.plist */,
 			);
 			path = ProductOpen;
+			sourceTree = "<group>";
+		};
+		9916073327159A6000CCC165 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9916073727159A9300CCC165 /* Montserrat-Medium.ttf */,
+				9916073427159A8C00CCC165 /* Montserrat-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		9916073E2715A9F000CCC165 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9916072B271590D300CCC165 /* ProductViewController.swift */,
+				9916072E2715975800CCC165 /* BlurEffectView.swift */,
+				9916073A2715A37E00CCC165 /* SizeStack.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,8 +155,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9916073527159A8C00CCC165 /* Montserrat-Regular.ttf in Resources */,
+				9916073827159A9300CCC165 /* Montserrat-Medium.ttf in Resources */,
 				9916071F2715722000CCC165 /* LaunchScreen.storyboard in Resources */,
-				9916071C2715722000CCC165 /* Assets.xcassets in Resources */,
+				9916072927157BDC00CCC165 /* Assets.xcassets in Resources */,
 				9916071A2715721D00CCC165 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,7 +172,10 @@
 			files = (
 				991607172715721D00CCC165 /* ViewController.swift in Sources */,
 				991607132715721D00CCC165 /* AppDelegate.swift in Sources */,
+				9916072C271590D300CCC165 /* ProductViewController.swift in Sources */,
+				9916073B2715A37E00CCC165 /* SizeStack.swift in Sources */,
 				991607152715721D00CCC165 /* SceneDelegate.swift in Sources */,
+				9916072F2715975800CCC165 /* BlurEffectView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
