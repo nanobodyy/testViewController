@@ -17,7 +17,8 @@
 		9916072F2715975800CCC165 /* BlurEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916072E2715975800CCC165 /* BlurEffectView.swift */; };
 		9916073527159A8C00CCC165 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9916073427159A8C00CCC165 /* Montserrat-Regular.ttf */; };
 		9916073827159A9300CCC165 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9916073727159A9300CCC165 /* Montserrat-Medium.ttf */; };
-		9916073B2715A37E00CCC165 /* SizeStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916073A2715A37E00CCC165 /* SizeStack.swift */; };
+		9916073B2715A37E00CCC165 /* SizeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916073A2715A37E00CCC165 /* SizeStackView.swift */; };
+		991607422715B8D600CCC165 /* FinalPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991607412715B8D600CCC165 /* FinalPriceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +34,8 @@
 		9916072E2715975800CCC165 /* BlurEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurEffectView.swift; sourceTree = "<group>"; };
 		9916073427159A8C00CCC165 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		9916073727159A9300CCC165 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
-		9916073A2715A37E00CCC165 /* SizeStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeStack.swift; sourceTree = "<group>"; };
+		9916073A2715A37E00CCC165 /* SizeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeStackView.swift; sourceTree = "<group>"; };
+		991607412715B8D600CCC165 /* FinalPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalPriceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +95,8 @@
 			children = (
 				9916072B271590D300CCC165 /* ProductViewController.swift */,
 				9916072E2715975800CCC165 /* BlurEffectView.swift */,
-				9916073A2715A37E00CCC165 /* SizeStack.swift */,
+				9916073A2715A37E00CCC165 /* SizeStackView.swift */,
+				991607412715B8D600CCC165 /* FinalPriceView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,8 +176,9 @@
 				991607172715721D00CCC165 /* ViewController.swift in Sources */,
 				991607132715721D00CCC165 /* AppDelegate.swift in Sources */,
 				9916072C271590D300CCC165 /* ProductViewController.swift in Sources */,
-				9916073B2715A37E00CCC165 /* SizeStack.swift in Sources */,
+				9916073B2715A37E00CCC165 /* SizeStackView.swift in Sources */,
 				991607152715721D00CCC165 /* SceneDelegate.swift in Sources */,
+				991607422715B8D600CCC165 /* FinalPriceView.swift in Sources */,
 				9916072F2715975800CCC165 /* BlurEffectView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

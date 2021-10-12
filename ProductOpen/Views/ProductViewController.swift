@@ -9,7 +9,7 @@ import UIKit
 
 class ProductViewController: UIViewController {
     
-    let backgroundImageView: UIImageView = {
+    private let backgroundImageView: UIImageView = {
         let imageview = UIImageView()
         imageview.image = #imageLiteral(resourceName: "background")
         imageview.contentMode = .scaleAspectFill
@@ -17,7 +17,7 @@ class ProductViewController: UIViewController {
         return imageview
     }()
     
-    let blurView: BlurEffectView = {
+    private let blurView: BlurEffectView = {
        let view = BlurEffectView()
         view.layer.cornerRadius = 20
         view.clipsToBounds = true
@@ -43,7 +43,7 @@ class ProductViewController: UIViewController {
         return label
     }()
     
-    let sizeLabel: UILabel = {
+    private let sizeLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
         label.font = UIFont(name: "Montserrat-Regular", size: 16)
@@ -54,7 +54,7 @@ class ProductViewController: UIViewController {
     
     let sizeStack = SizeStack()
     
-    let priceStaticLabel: UILabel = {
+    private let priceStaticLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
         label.font = UIFont(name: "Montserrat-Regular", size: 14)
@@ -63,12 +63,80 @@ class ProductViewController: UIViewController {
         return label
     }()
     
-    let rubleSymbol: UIImageView = {
+    private let rubleSymbol: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "coin")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
+    
+    private let rubleSymbol2: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "coin")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    let priceLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.font = UIFont(name: "Montserrat-Regular", size: 16)
+        label.text = "100"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let deliveryPriceStaticLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.font = UIFont(name: "Montserrat-Regular", size: 14)
+        label.text = "Цена доставки"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let deliveryPriceLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.font = UIFont(name: "Montserrat-Regular", size: 16)
+        label.text = "100"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let countStaticLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.font = UIFont(name: "Montserrat-Regular", size: 14)
+        label.text = "Количество"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let minusButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "minus"), for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    let plusButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "plus"), for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    let countLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.font = UIFont(name: "Montserrat-Regular", size: 16)
+        label.text = "100"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let finalPriceView = FinalPriceView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +154,15 @@ class ProductViewController: UIViewController {
         blurView.contentView.addSubview(sizeStack)
         blurView.contentView.addSubview(priceStaticLabel)
         blurView.contentView.addSubview(rubleSymbol)
+        blurView.contentView.addSubview(priceLabel)
+        blurView.contentView.addSubview(rubleSymbol2)
+        blurView.contentView.addSubview(deliveryPriceStaticLabel)
+        blurView.contentView.addSubview(deliveryPriceLabel)
+        blurView.contentView.addSubview(countStaticLabel)
+        blurView.contentView.addSubview(minusButton)
+        blurView.contentView.addSubview(plusButton)
+        blurView.contentView.addSubview(countLabel)
+        blurView.contentView.addSubview(finalPriceView)
     }
     
     func addConstraints() {
@@ -122,6 +199,39 @@ class ProductViewController: UIViewController {
         rubleSymbol.widthAnchor.constraint(equalToConstant: 20).isActive = true
         rubleSymbol.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
+        priceLabel.leadingAnchor.constraint(equalTo: rubleSymbol.trailingAnchor, constant: 10).isActive = true
+        priceLabel.centerYAnchor.constraint(equalTo: rubleSymbol.centerYAnchor).isActive = true
+        
+        deliveryPriceStaticLabel.leadingAnchor.constraint(greaterThanOrEqualTo: priceStaticLabel.trailingAnchor, constant: 10).isActive = true
+        let deliveryPriceStaticLabelLeadingConstraint =  deliveryPriceStaticLabel.leadingAnchor.constraint(equalTo: priceLabel.trailingAnchor, constant: 30)
+        deliveryPriceStaticLabelLeadingConstraint.priority = UILayoutPriority(rawValue: 100)
+        deliveryPriceStaticLabelLeadingConstraint.isActive = true
+        deliveryPriceStaticLabel.centerYAnchor.constraint(equalTo: priceStaticLabel.centerYAnchor).isActive = true
+        
+        rubleSymbol2.centerYAnchor.constraint(equalTo: rubleSymbol.centerYAnchor).isActive = true
+        rubleSymbol2.leadingAnchor.constraint(equalTo: deliveryPriceStaticLabel.leadingAnchor).isActive = true
+        
+        deliveryPriceLabel.centerYAnchor.constraint(equalTo: rubleSymbol2.centerYAnchor).isActive = true
+        deliveryPriceLabel.leadingAnchor.constraint(equalTo: rubleSymbol2.trailingAnchor, constant: 10).isActive = true
+        
+        countStaticLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        countStaticLabel.topAnchor.constraint(equalTo: rubleSymbol.bottomAnchor, constant: 20).isActive = true
+        
+        minusButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        minusButton.topAnchor.constraint(equalTo: countStaticLabel.bottomAnchor, constant: 5).isActive = true
+        minusButton.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        minusButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
+        countLabel.centerYAnchor.constraint(equalTo: minusButton.centerYAnchor).isActive = true
+        countLabel.leadingAnchor.constraint(equalTo: minusButton.trailingAnchor, constant: 10).isActive = true
+        
+        plusButton.centerYAnchor.constraint(equalTo: minusButton.centerYAnchor).isActive = true
+        plusButton.leadingAnchor.constraint(equalTo: countLabel.trailingAnchor, constant: 10).isActive = true
+        
+        finalPriceView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        finalPriceView.widthAnchor.constraint(equalToConstant: 104).isActive = true
+        finalPriceView.heightAnchor.constraint(equalToConstant: 97).isActive = true
+        finalPriceView.topAnchor.constraint(equalTo: priceStaticLabel.topAnchor).isActive = true
     }
     
 }
